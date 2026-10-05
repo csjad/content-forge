@@ -1,0 +1,122 @@
+# ============================================================
+# 内容工厂 ContentForge 全局配置
+# 修改保存后，下一次运行自动生效（方向可随时切换）
+# 敏感信息（API Key）请放 .env 文件，不要写在这里
+# ============================================================
+
+forge:
+  name: "内容工厂"
+  timezone: "Asia/Shanghai"
+  cadence: "daily"            # daily=每日生产 | batch=批量周更
+  daily_target: 1             # 每日目标产出条数
+
+# ---------- 内容方向（随时可改，改后新选题围绕新方向） ----------
+direction:
+  enabled: true
+  niche: "大学生成长与校园干货"        # 主赛道：一句话说清你做什么内容
+  audience: "大学生、刚毕业职场新人"    # 目标受众
+  language: "zh-CN"                  # 内容语言：zh-CN / en-US / zh-TW ...
+  style: "真诚、干货、口语化、有网感，不端不装"   # 内容风格
+  must_avoid: "标题党、虚假信息、贩卖焦虑、低俗擦边" # 红线
+  content_formats: "短视频口播、图文笔记、中长视频深度讲解"  # 适合本方向的形态
+  hooks: "痛点提问、反常识结论、数据冲击、场景代入"  # 开头钩子类型
+  custom_instructions: ""   # 附加创作指令，可留空
+
+# ---------- LLM（OpenAI 兼容接口，任选一家） ----------
+# 支持：deepseek / openai / doubao / agnes(https://apihub.agnes-ai.com/v1) / 任意兼容端点
+llm:
+  base_url: "https://api.deepseek.com/v1"   # 服务地址（/v1 结尾）
+  api_key: ""                               # 建议放 .env: LLM_API_KEY=xxx
+  model: "deepseek-chat"                    # 模型名
+  temperature: 0.8
+  max_tokens: 6000
+
+# ---------- 配音 ----------
+tts:
+  engine: "edge"                 # edge=微软免费TTS | api=走LLM供应商TTS
+  voice: "zh-CN-XiaoxiaoNeural"  # 女声；男声 zh-CN-YunxiNeural
+  rate: "+8%"                    # 语速
+  pitch: "+0Hz"
+
+# ---------- 图片素材 ----------
+image_source:
+  engine: "ai"                   # ai=AI绘图 | local=本地素材库
+  local_dir: "E:/Desktop/doubao/可商用素材库"   # 本地素材库路径（engine=local时用）
+  ai_prompt_style: "高清质感，构图干净，主体突出，留出底部字幕排版空间"
+
+# ---------- 视频工厂 ----------
+video:
+  default_format: "voice_slides"   # voice_slides=图文快剪 | ai_scene=AI画面 | mixed_cut=混剪
+  resolution: [1080, 1920]         # 竖屏 9:16
+  fps: 30
+  bgm: false                       # 是否混入背景音乐（需在 data/bgm 放音乐文件）
+  subtitle_style:
+    font: "msyhbd"                 # Windows 微软雅黑粗体
+    font_size_ratio: 0.052         # 字号=画宽*比例
+    font_color: "#FFFFFF"
+    stroke_color: "#000000"
+    position: "bottom"             # bottom=底部字幕
+    margin_ratio: 0.08             # 底部留白比例
+
+# ---------- 平台（八大平台，可开关） ----------
+# format: voice_slides / ai_scene / mixed_cut / text（纯图文）
+# channel: api=官方API | rpa=浏览器自动化 | manual=人工确认 | third_party=第三方聚合工具
+platforms:
+  douyin:        # 抖音
+    enabled: true
+    format: "voice_slides"
+    channel: "rpa"
+    publish_time: "19:00"
+  xiaohongshu:   # 小红书
+    enabled: true
+    format: "voice_slides"
+    channel: "rpa"
+    publish_time: "19:30"
+  bilibili:      # B站
+    enabled: true
+    format: "voice_slides"
+    channel: "rpa"
+    publish_time: "20:00"
+  video_account: # 视频号
+    enabled: true
+    format: "voice_slides"
+    channel: "manual"
+    publish_time: "20:30"
+  weibo:         # 微博
+    enabled: true
+    format: "voice_slides"
+    channel: "rpa"
+    publish_time: "12:00"
+  youtube:       # YouTube（官方API，需申请后填入密钥）
+    enabled: true
+    format: "voice_slides"
+    channel: "api"
+    publish_time: "21:00"
+  tiktok:        # TikTok（官方API需申请，先走RPA）
+    enabled: true
+    format: "voice_slides"
+    channel: "rpa"
+    publish_time: "21:30"
+  x:             # X/Twitter（官方API，需申请）
+    enabled: true
+    format: "voice_slides"
+    channel: "api"
+    publish_time: "22:00"
+  instagram:     # Instagram
+    enabled: true
+    format: "voice_slides"
+    channel: "rpa"
+    publish_time: "22:30"
+
+# ---------- 发布控制 ----------
+publish:
+  confirm_before_publish: true   # 发布前人工确认（每天1条精品，建议开启）
+  max_retry: 2                   # 单平台失败重试次数
+  headless: true                 # RPA 无头模式（排查时改 false 看浏览器）
+
+# ---------- 选题引擎 ----------
+topics:
+  sources: ["baidu_hot", "weibo_hot", "douyin_hot"]  # 热点源（newsapi 需key）
+  candidates_per_run: 6          # 每次生成候选选题数
+  min_score: 60                  # 低于此分不进候选池
+  dedup_days: 30                 # 去重窗口（天）

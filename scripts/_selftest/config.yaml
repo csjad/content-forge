@@ -1,0 +1,65 @@
+forge:
+  timezone: "Asia/Shanghai"
+  cadence: "daily"
+  daily_target: 1
+
+direction:
+  enabled: true
+  niche: "大学生成长与校园干货"
+  audience: "大学生"
+  language: "zh-CN"
+  style: "真诚、干货、口语化"
+  must_avoid: "标题党"
+  content_formats: "短视频口播"
+  hooks: "痛点提问"
+  custom_instructions: ""
+
+llm:
+  base_url: "http://127.0.0.1:8765/v1"
+  api_key: "test"
+  model: "mock"
+
+tts:
+  engine: "edge"
+  voice: "zh-CN-XiaoxiaoNeural"
+  rate: "+8%"
+  pitch: "+0Hz"
+
+image_source:
+  engine: "local"
+  local_dir: "E:/Desktop/doubao/可商用素材库"
+
+video:
+  default_format: "voice_slides"
+  resolution: [1080, 1920]
+  fps: 30
+  bgm: false
+  subtitle_style:
+    font: "msyhbd"
+    font_size_ratio: 0.052
+    font_color: "#FFFFFF"
+    stroke_color: "#000000"
+    position: "bottom"
+    margin_ratio: 0.08
+
+platforms:
+  douyin: {enabled: true, format: "voice_slides", channel: "rpa", publish_time: "19:00"}
+  xiaohongshu: {enabled: true, format: "voice_slides", channel: "rpa", publish_time: "19:30"}
+  bilibili: {enabled: true, format: "voice_slides", channel: "rpa", publish_time: "20:00"}
+  video_account: {enabled: true, format: "voice_slides", channel: "manual", publish_time: "20:30"}
+  weibo: {enabled: true, format: "voice_slides", channel: "rpa", publish_time: "12:00"}
+  youtube: {enabled: true, format: "voice_slides", channel: "api", publish_time: "21:00"}
+  tiktok: {enabled: true, format: "voice_slides", channel: "rpa", publish_time: "21:30"}
+  x: {enabled: true, format: "voice_slides", channel: "api", publish_time: "22:00"}
+  instagram: {enabled: true, format: "voice_slides", channel: "rpa", publish_time: "22:30"}
+
+publish:
+  confirm_before_publish: true
+  max_retry: 2
+  headless: true
+
+topics:
+  sources: ["baidu_hot", "weibo_hot"]
+  candidates_per_run: 6
+  min_score: 60
+  dedup_days: 30
