@@ -1,5 +1,11 @@
 # ContentForge
 
+[![CI](https://github.com/csjad/content-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/csjad/content-forge/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](pyproject.toml)
+[![Ruff](https://img.shields.io/badge/lint-ruff-8A2BE2.svg)](https://github.com/astral-sh/ruff)
+[![Platforms](https://img.shields.io/badge/publish-9%20platforms-2ea44f.svg)](docs/platform-channels.md)
+
 **One-click content factory: topic discovery → script writing → video production → multi-platform publishing → dashboard.**
 
 ContentForge is a self-hosted pipeline that turns a single command into a finished,

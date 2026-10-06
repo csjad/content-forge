@@ -1,0 +1,7 @@
+﻿gh.exe : the response contains terminal escape sequences; pass --allow-escape-sequences to output it anyway
+所在位置 行:1 字符: 58
++ ... in\gh.exe"; & $gh api repos/csjad/content-forge/actions/jobs/11210665 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (the response co...utput it anyway:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

@@ -1,0 +1,116 @@
+test (ubuntu-latest, 3.12)	Run unit tests	﻿2026-10-06T04:22:51.4453349Z ##[group]Run pytest -m "not rpa and not network and not integration" -v
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.4453869Z ^[[36;1mpytest -m "not rpa and not network and not integration" -v^[[0m
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.4515336Z shell: /usr/bin/bash -e {0}
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.4515585Z env:
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.4515852Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.4516312Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.4516750Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.4517125Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.4517500Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.4517882Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.4518200Z ##[endgroup]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.7731547Z ============================= test session starts ==============================
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.7733042Z platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.12.14/x64/bin/python
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.7733876Z cachedir: .pytest_cache
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.7734261Z rootdir: /home/runner/work/content-forge/content-forge
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.7734695Z configfile: pyproject.toml
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.7735262Z testpaths: tests
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.7735523Z plugins: cov-7.1.0
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9281569Z collecting ... collected 37 items
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9282103Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9354411Z tests/test_config.py::test_config_loads_typed_sections PASSED            [  2%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9408325Z tests/test_config.py::test_enabled_platforms_filters_disabled PASSED     [  5%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9461133Z tests/test_config.py::test_direction_to_prompt_contains_niche PASSED     [  8%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9481289Z tests/test_config.py::test_missing_niche_raises PASSED                   [ 10%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9493923Z tests/test_config.py::test_missing_file_raises PASSED                    [ 13%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9514370Z tests/test_config.py::test_invalid_channel_raises PASSED                 [ 16%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9535004Z tests/test_config.py::test_invalid_cadence_raises PASSED                 [ 18%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9562385Z tests/test_config.py::test_reload_picks_up_changes PASSED                [ 21%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9571842Z tests/test_config.py::test_env_api_key_resolution PASSED                 [ 24%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9673351Z tests/test_db.py::test_topic_lifecycle PASSED                            [ 27%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9744298Z tests/test_db.py::test_topic_dedup PASSED                                [ 29%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9827995Z tests/test_db.py::test_content_and_scripts_roundtrip PASSED              [ 32%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9906617Z tests/test_db.py::test_assets PASSED                                     [ 35%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:51.9995066Z tests/test_db.py::test_queue_lifecycle PASSED                            [ 37%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:52.0077926Z tests/test_db.py::test_logs PASSED                                       [ 40%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:52.0150628Z tests/test_db.py::test_list_topics_by_status PASSED                      [ 43%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:52.0159066Z tests/test_llm.py::test_chat_returns_content PASSED                      [ 45%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:52.0169175Z tests/test_llm.py::test_chat_json_strips_fences PASSED                   [ 48%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:52.0177659Z tests/test_llm.py::test_chat_json_recovers_substring PASSED              [ 51%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:22:58.0200753Z tests/test_llm.py::test_chat_retries_then_raises PASSED                  [ 54%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.0216387Z tests/test_llm.py::test_chat_recovers_after_transient_failure PASSED     [ 56%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.0225822Z tests/test_llm.py::test_unconfigured_raises PASSED                       [ 59%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.0233606Z tests/test_queue.py::test_scheduled_time_future_same_day PASSED          [ 62%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.2330695Z tests/test_queue.py::test_enqueue_all_platforms PASSED                   [ 64%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.2480274Z tests/test_queue.py::test_enqueue_deduplicates PASSED                    [ 67%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.2615522Z tests/test_queue.py::test_process_due_marks_success PASSED               [ 70%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.2751810Z tests/test_queue.py::test_process_due_force_publishes_all PASSED         [ 72%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.2887534Z tests/test_queue.py::test_process_due_failure_recorded PASSED            [ 75%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.4149695Z tests/test_video.py::test_gradient_background PASSED                     [ 78%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.5753681Z tests/test_video.py::test_make_cover_renders_title FAILED                [ 81%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.7074122Z tests/test_video.py::test_cover_wraps_long_title FAILED                  [ 83%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.7615205Z tests/test_video.py::test_subtitle_frame_rendering PASSED                [ 86%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.7756239Z tests/test_writing.py::test_generate_filters_low_scores_and_writes_db PASSED [ 89%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.7866578Z tests/test_writing.py::test_generate_dedup PASSED                        [ 91%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.7972214Z tests/test_writing.py::test_script_writer_returns_structured_script PASSED [ 94%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8102470Z tests/test_writing.py::test_script_writer_rejects_too_short PASSED       [ 97%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8390448Z tests/test_writing.py::test_platform_adapter_normalizes PASSED           [100%]
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8391125Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8391391Z =================================== FAILURES ===================================
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8393030Z ________________________ test_make_cover_renders_title _________________________
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8393653Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8394246Z tmp_project = PosixPath('/tmp/pytest-of-runner/pytest-0/test_make_cover_renders_title0')
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8395003Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8395186Z     def test_make_cover_renders_title(tmp_project):
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8395713Z >       path = assets.make_cover("theme", "Short Title", (540, 960))
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8396256Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8396544Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8396675Z tests/test_video.py:21: 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8397068Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8397591Z contentforge/video/assets.py:172: in make_cover
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8398011Z     font_path = find_font()
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8398329Z                 ^^^^^^^^^^^
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8398709Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8399053Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8399209Z     def find_font() -> str:
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8399561Z         for path in _FONT_CANDIDATES:
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8399949Z             if os.path.exists(path):
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8400314Z                 return path
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8400641Z >       raise FileNotFoundError(
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8401169Z             "No CJK font found. Install one (msyh / simhei / PingFang / Noto Sans CJK)."
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8401735Z         )
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8402546Z E       FileNotFoundError: No CJK font found. Install one (msyh / simhei / PingFang / Noto Sans CJK).
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8403097Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8403280Z contentforge/video/assets.py:43: FileNotFoundError
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8403847Z _________________________ test_cover_wraps_long_title __________________________
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8404256Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8404613Z tmp_project = PosixPath('/tmp/pytest-of-runner/pytest-0/test_cover_wraps_long_title0')
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8405089Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8405216Z     def test_cover_wraps_long_title(tmp_project):
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8405701Z         # long title must render without exceptions and stay within 3 lines
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8406194Z         title = "A very long title that should wrap across multiple lines gracefully"
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8406640Z >       path = assets.make_cover("theme", title, (540, 960))
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8406966Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8407460Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8407551Z tests/test_video.py:29: 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8407832Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8408182Z contentforge/video/assets.py:172: in make_cover
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8408478Z     font_path = find_font()
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8408699Z                 ^^^^^^^^^^^
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8408965Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8409202Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8409287Z     def find_font() -> str:
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8409520Z         for path in _FONT_CANDIDATES:
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8409788Z             if os.path.exists(path):
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8410034Z                 return path
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8410269Z >       raise FileNotFoundError(
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8410626Z             "No CJK font found. Install one (msyh / simhei / PingFang / Noto Sans CJK)."
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8410996Z         )
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8411368Z E       FileNotFoundError: No CJK font found. Install one (msyh / simhei / PingFang / Noto Sans CJK).
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8411729Z 
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8412069Z contentforge/video/assets.py:43: FileNotFoundError
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8412475Z =========================== short test summary info ============================
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8413370Z FAILED tests/test_video.py::test_make_cover_renders_title - FileNotFoundError: No CJK font found. Install one (msyh / simhei / PingFang / Noto Sans CJK).
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8414380Z FAILED tests/test_video.py::test_cover_wraps_long_title - FileNotFoundError: No CJK font found. Install one (msyh / simhei / PingFang / Noto Sans CJK).
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8415067Z ========================= 2 failed, 35 passed in 9.05s =========================
+test (ubuntu-latest, 3.12)	Run unit tests	2026-10-06T04:23:00.8809012Z ##[error]Process completed with exit code 1.
