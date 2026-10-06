@@ -160,5 +160,6 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) before sending a PR.
 
 ## License
 
-MIT — see [`LICENSE`](LICENSE). You are responsible for how you use the
-publishing channels; the project is provided as-is.
+MIT — see [`LICENSE`](LICENSE) and the automated-publishing
+[`NOTICE`](NOTICE.md). You are responsible for how you use the publishing
+channels; the project is provided as-is.
